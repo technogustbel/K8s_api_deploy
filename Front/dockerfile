@@ -1,0 +1,22 @@
+FROM node:alpine
+
+RUN apk add --no-cache git
+
+RUN mkdir /root/projects
+#RUN cd /root/projects
+
+WORKDIR /root/projects
+
+RUN git clone https://github.com/michaelperson/K8s_api_deploy
+
+#RUN cd K8s_api_deploy
+
+WORKDIR /root/projects/K8s_api_deploy/Front/
+
+RUN npm install -g @angular/cli
+
+RUN npm install
+
+CMD ["ng", "serve", "--host", "0.0.0.0"]
+
+EXPOSE 4200

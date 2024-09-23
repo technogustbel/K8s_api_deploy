@@ -1,0 +1,18 @@
+FROM node
+
+RUN mkdir /root/projects
+#RUN cd /root/projects
+
+WORKDIR /root/projects
+
+RUN git clone https://github.com/michaelperson/K8s_api_deploy
+
+#RUN cd K8s_api_deploy
+
+WORKDIR /root/projects/K8s_api_deploy/Back/
+
+RUN npm install
+
+CMD ["npm","start"]
+
+EXPOSE 3000
