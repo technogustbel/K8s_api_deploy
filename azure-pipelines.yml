@@ -33,4 +33,4 @@ stages:
         repository: 'augustech/k8s_api_deploy_front'
         command: 'buildAndPush'
         #Dockerfile: '**/Dockerfile'
-        Dockerfile: '$(Build.SourcesDirectory)/Back/dockerfile'
+        Dockerfile: '$(Build.SourcesDirectory)/Front/dockerfile'
