@@ -30,7 +30,7 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'docker hub technofront'
-        repository: 'K8s_api_deploy_front'
+        repository: 'augustech/k8s_api_deploy_front'
         command: 'buildAndPush'
         #Dockerfile: '**/Dockerfile'
         Dockerfile: '$(Build.SourcesDirectory)/Back/dockerfile'
