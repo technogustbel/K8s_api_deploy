@@ -28,3 +28,10 @@ stages:
         repository: 'augustech/k8s_api_deploy_back'
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/Back/dockerfile'
+  - job: DeployOnK8s
+    displayName: Deploy On K8s
+    pool: My Local K8s
+    steps:
+    - script: 
+        echo test script via Agent
+        echo test 123
